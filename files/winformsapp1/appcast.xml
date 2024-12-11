@@ -5,11 +5,11 @@
     <description>Most recent changes with links to updates</description>
     <language>en</language>
     <item>
-      <title>Application 1.0.0+86f0b9116dbd0548f78e6b069aec7fb4c35f367e</title>
+      <title>Application 1.0.3-beta1</title>
       <pubDate>Tue, 10 Dec 2024 10:35:35 +05:00</pubDate>
-      <sparkle:version>1.0.0+86f0b9116dbd0548f78e6b069aec7fb4c35f367e</sparkle:version>
-      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
-      <enclosure url="https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/installer/WinFormsApp1.exe" sparkle:version="1.0.0+86f0b9116dbd0548f78e6b069aec7fb4c35f367e" sparkle:shortVersionString="1.0.0" length="145408" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:signature="soF0RbxeKs9Hj7eGXp5Hm2w3FgjdUjG+AT0drLMQNPHj00GVxi2dZJiW8nlRKBB7BFl6a/xZeBD5SCEbxuROCA==" />
+      <sparkle:version>1.0.3-beta1</sparkle:version>
+      <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+      <enclosure url="https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/installer/WinFormsApp1.exe" sparkle:version="1.0.3-beta1" sparkle:shortVersionString="1.0.3" length="145920" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:signature="uBXKuiUP2oMjwIrEjIS4VkBGxtXRNG/wQBruHrE/AZ9yBmvYYV5XO0ZK7mg1b0JWv7N8BHEnHwrO7GyUreSRAA==" />
     </item>
   </channel>
 </rss>
