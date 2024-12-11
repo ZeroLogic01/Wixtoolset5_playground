@@ -14,7 +14,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
 
-            var appcastUrl = "https://netsparkleupdater.github.io/NetSparkle/files/sample-app/appcast.xml";
+            var appcastUrl = "https://github.com/ZeroLogic01/Wixtoolset5_playground/files/winformsapp1/appcast.xml";
             // set icon in project properties!
             string manifestModuleName = Assembly.GetEntryAssembly().ManifestModule.FullyQualifiedName;
             var icon = Icon.ExtractAssociatedIcon(manifestModuleName);
@@ -50,10 +50,6 @@ namespace WinFormsApp1
             _sparkleUpdateDetector.CheckForUpdatesAtUserRequest();
         }
 
-        private void CheckForUpdates()
-        {
-            throw new NotImplementedException();
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {

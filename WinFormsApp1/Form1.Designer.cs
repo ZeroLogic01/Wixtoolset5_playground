@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             textBox1 = new TextBox();
+            AppBackgroundCheckButton = new Button();
+            ExplicitUserRequestCheckButton = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -38,11 +40,33 @@
             textBox1.Size = new Size(339, 23);
             textBox1.TabIndex = 0;
             // 
+            // AppBackgroundCheckButton
+            // 
+            AppBackgroundCheckButton.Location = new Point(195, 155);
+            AppBackgroundCheckButton.Name = "AppBackgroundCheckButton";
+            AppBackgroundCheckButton.Size = new Size(339, 23);
+            AppBackgroundCheckButton.TabIndex = 1;
+            AppBackgroundCheckButton.Text = "App Background Check";
+            AppBackgroundCheckButton.UseVisualStyleBackColor = true;
+            AppBackgroundCheckButton.Click += AppBackgroundCheckButton_Click;
+            // 
+            // ExplicitUserRequestCheckButton
+            // 
+            ExplicitUserRequestCheckButton.Location = new Point(195, 212);
+            ExplicitUserRequestCheckButton.Name = "ExplicitUserRequestCheckButton";
+            ExplicitUserRequestCheckButton.Size = new Size(339, 23);
+            ExplicitUserRequestCheckButton.TabIndex = 2;
+            ExplicitUserRequestCheckButton.Text = "Explicit User Request To Check ";
+            ExplicitUserRequestCheckButton.UseVisualStyleBackColor = true;
+            ExplicitUserRequestCheckButton.Click += ExplicitUserRequestCheckButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(ExplicitUserRequestCheckButton);
+            Controls.Add(AppBackgroundCheckButton);
             Controls.Add(textBox1);
             Name = "Form1";
             Text = "Form1";
@@ -54,5 +78,7 @@
         #endregion
 
         private TextBox textBox1;
+        private Button AppBackgroundCheckButton;
+        private Button ExplicitUserRequestCheckButton;
     }
 }
