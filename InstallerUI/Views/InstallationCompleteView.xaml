@@ -1,0 +1,86 @@
+﻿<UserControl
+    d:DesignHeight="314"
+    d:DesignWidth="601"
+    mc:Ignorable="d"
+    x:Class="InstallerUI.Views.InstallationCompleteView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:properties="clr-namespace:InstallerUI.Properties"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <BooleanToVisibilityConverter x:Key="BoolToVis" />
+            <!--<convertor:InverseBooleanToVisibilityConverter x:Key="BoolToVisInverse"/>-->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/InstallerUI;component/Resources/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <!--<ColumnDefinition Width="auto"/>-->
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+
+        <Grid
+            Grid.Column="1"
+            Grid.Row="0"
+            HorizontalAlignment="Stretch"
+            Margin="0,0,0,0"
+            VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock
+                Grid.Row="0"
+                HorizontalAlignment="Stretch"
+                Style="{StaticResource H1}"
+                Text="{x:Static properties:Resources.InstallationCompleteTitle}"
+                TextWrapping="Wrap" />
+
+            <TextBlock
+                Grid.Row="1"
+                Margin="0,0,0,20"
+                Text="{x:Static properties:Resources.InstallationCompleteMessage}"
+                TextWrapping="Wrap" />
+
+        </Grid>
+
+
+        <!--  Bottom Buttons  -->
+        <Grid
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.Row="1"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom">
+            <StackPanel HorizontalAlignment="Stretch" Orientation="Horizontal">
+                <Button
+                    Command="{Binding Path=FinishCommand, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Content="{x:Static properties:Resources.FinishBtn}"
+                    Height="30"
+                    Margin="10,10,0,0"
+                    Style="{DynamicResource BtnDefault}"
+                    Width="100" />
+            </StackPanel>
+
+        </Grid>
+
+    </Grid>
+</UserControl>

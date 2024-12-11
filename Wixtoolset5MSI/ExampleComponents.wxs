@@ -1,0 +1,11 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+	<Fragment>
+		<ComponentGroup Id="ExampleComponents" Directory="INSTALLFOLDER">
+			<Files Include="$(WinFormsApp1.TargetDir)\**">
+				 <!--Don't harvest PDB files because we don't want to ship them.--> 
+				<Exclude Files="$(WinFormsApp1.TargetDir)**\*.pdb" />
+			</Files>
+
+		</ComponentGroup>
+	</Fragment>
+</Wix>

@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Immo_Pro_E.ico</ApplicationIcon>
+    <UseWindowsForms>True</UseWindowsForms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Nunito-Black.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-BlackItalic.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-Bold.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-BoldItalic.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-ExtraBold.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-ExtraBoldItalic.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-ExtraLight.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-ExtraLightItalic.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-Italic.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-Light.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-LightItalic.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-Medium.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-MediumItalic.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-Regular.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-SemiBold.ttf" />
+    <Resource Include="Assets\Fonts\Nunito-SemiBoldItalic.ttf" />
+    <None Update="InstallerUI.BootstrapperCore.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Logo.png" />
+    <Resource Include="Assets\Images\LogoWithName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Immo_Pro_E.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\banner_black_with_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\splash_screen_banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Logo_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Immo_Pro_LP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\Logo_white_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\login_background_banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\banner_with_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="9.0.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Prism.Container.Abstractions" Version="9.0.106" />
+    <PackageReference Include="Prism.Core" Version="9.0.537" />
+    <PackageReference Include="Prism.Events" Version="9.0.537" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="9.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Management" Version="9.0.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="9.0.0" />
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.0" />
+    <PackageReference Include="WixToolset.BootstrapperApplicationApi" Version="5.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Convertors\BitmapToImageSourceConverter.cs" />
+    <Page Remove="Resources\Styles.xaml" />
+  </ItemGroup>
+</Project>

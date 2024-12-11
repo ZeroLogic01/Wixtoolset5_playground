@@ -1,0 +1,32 @@
+﻿<Project Sdk="WixToolset.Sdk/5.0.2">
+  <!-- Define properties -->
+  <PropertyGroup>
+    <ToBeHarvested>$(SolutionDir)\WinFormsApp1\bin\$(Configuration)\net9.0\win-$(Platform)\publish</ToBeHarvested>
+  </PropertyGroup>
+  <!-- Define project references -->
+  <ItemGroup>
+    <PackageReference Include="WixToolset.Heat" Version="5.0.2" />
+    <PackageReference Include="WixToolset.Netfx.wixext" Version="5.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinFormsApp1\WinFormsApp1.csproj" />
+  </ItemGroup>
+  <!--<ItemGroup>
+		<HeatProject
+			OutputFile="ComponentsGenerated.wxs"
+			DirectoryRefId="INSTALLFOLDER"
+			ComponentGroupName="MyComponentGroup"
+			ProjectFile="..\MyProject\MyProject.csproj"
+			AutoGenerateGuids="false"
+			GenerateGuidsNow="true"
+			ToolPath="$(WixToolPath)"
+			PreprocessorVariable="var.BasePath"
+			RunAsSeparateProcess="$(RunWixToolsOutOfProc)"
+			SuppressRegistry="true"/>
+	</ItemGroup>-->
+  <!--Transforms="IncludeDirectiveAndRegistryKey.xslt;PreserveComponentGuids.xslt;MergeComponents.xslt;" />-->
+  <ItemGroup>
+    <!--<Compile Include="ComponentsGenerated.wxs" />-->
+  </ItemGroup>
+  <!--Transforms="IncludeDirectiveAndRegistryKey.xslt;PreserveComponentGuids.xslt;MergeComponents.xslt;"-->
+</Project>

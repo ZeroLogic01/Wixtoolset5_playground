@@ -1,0 +1,18 @@
+<Project Sdk="WixToolset.Sdk/5.0.2">
+  <PropertyGroup>
+    <OutputType>Bundle</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="WixToolset.Bal.wixext" Version="5.0.2" />
+    <PackageReference Include="WixToolset.Netfx.wixext" Version="5.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WixToolset.WixBA\WixToolset.WixBA.csproj">
+      <TargetFrameworks>net472,net9.0-windows</TargetFrameworks>
+    </ProjectReference>
+    <ProjectReference Include="..\Wixtoolset5MSI\Wixtoolset5MSI.wixproj" />
+  </ItemGroup>
+</Project>

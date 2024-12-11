@@ -1,0 +1,29 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+	 xmlns:netfx="http://wixtoolset.org/schemas/v4/wxs/netfx">
+	<Package Name="Wixtoolset5MSI" Manufacturer="Zero Tech" Version="2.0.2.0"
+			 UpgradeCode="d74bb94f-02cf-4358-acab-c3b092d83552" Scope="perMachine">
+		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeError)" />
+		<MediaTemplate EmbedCab="true"/>
+
+
+		<netfx:DotNetCompatibilityCheck
+			Id="AspDotNetCoreCheckManualId"
+			Property="AspNetCoreRuntimeVersion"
+			Platform="$(var.Platform)"
+			RuntimeType="aspnet"
+			RollForward="major"
+			Version="9.0.0"
+			/>
+		<netfx:DotNetCompatibilityCheck
+			Id="DotNetCoreCheckManualId"
+			Property="DOTNETCORECHECKRESULT"
+			Platform="$(var.Platform)"
+			RuntimeType="core"
+			RollForward="latestMajor"
+			Version="9.0.0" />
+
+		<Feature Id="Main">
+			<ComponentGroupRef Id="ExampleComponents" />
+		</Feature>
+	</Package>
+</Wix>

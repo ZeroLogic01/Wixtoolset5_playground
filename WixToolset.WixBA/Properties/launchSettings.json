@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "WixToolset.WixBA": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    },
+    "Profile 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\M Usman\\source\\repos\\Wixtoolset5_playground\\Bootstrapper1\\bin\\x86\\Debug\\Bootstrapper1.exe",
+      "environmentVariables": {
+        "WixDebugBootstrapperApplication": "Bootstrapper1.exe"
+      }
+    }
+  }
+}

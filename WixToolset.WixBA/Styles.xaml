@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright (c) .NET Foundation and contributors. All rights reserved. Licensed under the Microsoft Reciprocal License. See LICENSE.TXT file in the project root for full license information. -->
+
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib"
+                    xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:shell="clr-namespace:System.Windows.Shell;assembly=PresentationFramework"
+                    xmlns:wixba="clr-namespace:WixToolset.WixBA">
+
+    <!-- Converters -->
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+    <!-- Fonts -->
+    <FontFamily x:Key="FontFamily">Segoe UI, Arial</FontFamily>
+    <System:Double x:Key="FontSizeBranding">18</System:Double>
+    <System:Double x:Key="FontSizeMedium">12</System:Double>
+    <System:Double x:Key="FontSizeButton">14</System:Double>
+    
+    <SolidColorBrush Color="#1794E0" x:Key="PrimaryColorBrush" />
+    <SolidColorBrush Color="#AA888888" x:Key="PrimaryOpacityMask" />
+    <SolidColorBrush Color="#0E3F6C" x:Key="PrimaryFontColor"/>
+
+    <!-- Images -->
+    <BitmapImage x:Key="LogoOverLightBackground" UriSource="pack://application:,,,/WixToolset.WixBA;component/resources/banner_with_text.png" />
+    <BitmapImage x:Key="LogoOverDarkBackground" UriSource="pack://application:,,,/WixToolset.WixBA;component/resources/logo-black-hollow.png" />
+
+    <!-- Colors -->
+    <Color x:Key="ProgressIndicatorColor">#FF1EF1E8</Color>
+
+    <!-- Brushs -->
+    <SolidColorBrush x:Key="ProgressIndicatorBrush" Color="{DynamicResource ProgressIndicatorColor}" />
+
+    <LinearGradientBrush x:Key="ProgressBarIndicatorAnimatedFill" StartPoint="0,0" EndPoint="1,0">
+        <LinearGradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Offset="0" Color="#000000FF" />
+                <GradientStop Offset="0.5" Color="#600000FF" />
+                <GradientStop Offset="0.54" Color="{DynamicResource {x:Static SystemColors.ControlTextColorKey}}" />
+                <GradientStop Offset="0.56" Color="{DynamicResource {x:Static SystemColors.ControlTextColorKey}}" />
+                <GradientStop Offset="0.6" Color="#600000FF" />
+                <GradientStop Offset="1" Color="#000000FF" />
+            </GradientStopCollection>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <!-- Control Templates -->
+    <ControlTemplate x:Key="HyperlinkedButtonTemplateKey" TargetType="{x:Type Button}">
+        <ContentPresenter Margin="{TemplateBinding Control.Padding}"
+                          HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                          VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                          Content="{TemplateBinding ContentControl.Content}"
+                          ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                          SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ProgressBarTemplateKey" TargetType="{x:Type ProgressBar}">
+        <Border Name="TemplateRoot"
+                Margin="0,5"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="3">
+            <Grid ClipToBounds="True" SnapsToDevicePixels="true">
+                <Rectangle Fill="{TemplateBinding Background}" />
+                <Rectangle Name="PART_Track" ClipToBounds="True" />
+                <Decorator x:Name="PART_Indicator" HorizontalAlignment="Left">
+                    <Grid Name="Foreground">
+                        <Rectangle x:Name="Indicator" Fill="{TemplateBinding Foreground}" />
+                        <Grid x:Name="Animation">
+                            <Rectangle x:Name="PART_GlowRect"
+                                       Width="80"
+                                       Margin="-100,0,0,0"
+                                       HorizontalAlignment="Left"
+                                       Fill="{StaticResource ProgressBarIndicatorAnimatedFill}" />
+                        </Grid>
+                    </Grid>
+                </Decorator>
+            </Grid>
+        </Border>
+    </ControlTemplate>
+
+    <!-- Styles -->
+    <Style x:Key="ActionBtnStkPnlStyle" TargetType="StackPanel">
+        <Setter Property="Margin" Value="0,2,0,0" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="FinalActionsStkPnlStyle" TargetType="StackPanel">
+        <Setter Property="Margin" Value="80,2,0,0" />
+    </Style>
+
+    <Style x:Key="BrandStkPnlStyle" TargetType="StackPanel">
+        <Setter Property="Margin" Value="0,0,20,0" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Width" Value="100" />
+        <Setter Property="Width" Value="100" />
+    </Style>
+
+    <Style x:Key="CommonTextBlkStyle" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="WrapWithOverflow" />
+        <Setter Property="FontFamily" Value="{DynamicResource FontFamily}" />
+    </Style>
+
+    <Style x:Key="TitleTextBlkStyle"
+           BasedOn="{StaticResource CommonTextBlkStyle}"
+           TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="{DynamicResource ResourceKey=FontSizeBranding}" />
+        <Setter Property="FontWeight" Value="ExtraBold" />
+        <Setter Property="Margin" Value="0,5,0,0" />
+    </Style>
+
+
+    <Style x:Key="LabelTextBlkStyle"
+           BasedOn="{StaticResource CommonTextBlkStyle}"
+           TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeButton}" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Margin" Value="0,2,3,0" />
+    </Style>
+
+    <Style x:Key="DataTextBlkStyle"
+           BasedOn="{StaticResource CommonTextBlkStyle}"
+           TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeMedium}" />
+        <Setter Property="TextAlignment" Value="Left" />
+        <Setter Property="Margin" Value="2,2,3,0" />
+    </Style>
+
+    <Style x:Key="StatusTextStyle"
+           BasedOn="{StaticResource CommonTextBlkStyle}"
+           TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{DynamicResource {x:Static SystemFonts.MessageFontFamilyKey}}" />
+        <Setter Property="FontSize" Value="{DynamicResource FontSizeMedium}" />
+        <Setter Property="Margin" Value="8" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+    </Style>
+
+    <Style x:Key="ActionButtonStyle" TargetType="Button">
+        <Setter Property="MinHeight" Value="30" />
+        <Setter Property="MinWidth" Value="100" />
+        <Setter Property="Margin" Value="5,0,0,0" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="{DynamicResource FontFamily}" />
+    </Style>
+    <Style TargetType="{x:Type Button}" x:Key="BtnDefault">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}" />
+        <Setter Property="Background" Value="{StaticResource PrimaryColorBrush}" />
+        <!--<Setter Property="BorderBrush" Value="#74AD44"/>-->
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="10,5" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="4"
+                        x:Name="Border" />
+
+                        <ContentPresenter
+                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        Margin="{TemplateBinding Padding}"
+                        RecognizesAccessKey="True"
+                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="OpacityMask" Value="{StaticResource PrimaryOpacityMask}" />
+                            <Setter Property="Margin" Value="2,1" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="Background" Value="#1FA3FF" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <!--<Setter Property="OpacityMask" Value="{StaticResource PrimaryOpacityMask}"/>-->
+                            <Setter Property="Foreground" Value="#E0E0E0" />
+                            <!--  Light gray for text  -->
+                            <Setter Property="Opacity" Value="0.6" />
+                            <!--  Slight transparency for disabled  -->
+                            <Setter Property="Effect" Value="{x:Null}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="FinalActionButtonStyle"
+           BasedOn="{StaticResource ActionButtonStyle}"
+           TargetType="Button">
+        <Setter Property="Margin" Value="40,0,0,0" />
+    </Style>
+
+    <Style x:Key="HyperlinkedButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="0,2,0,0" />
+        <Setter Property="Template" Value="{StaticResource HyperlinkedButtonTemplateKey}" />
+        <Setter Property="IsHitTestVisible" Value="True" />
+    </Style>
+
+    <Style x:Key="LogoStyle" TargetType="Image">
+        <Setter Property="Height" Value="50" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Stretch" Value="UniformToFill" />
+        <Setter Property="IsHitTestVisible" Value="False" />
+        <Setter Property="Source" Value="{DynamicResource LogoOverLightBackground}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Path=IsLightBackground, Source={x:Static wixba:WindowProperties.Instance}}" Value="false">
+                <Setter Property="Source" Value="{DynamicResource LogoOverDarkBackground}" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="UpdateMarqueeStyle" TargetType="ProgressBar">
+        <Setter Property="Foreground" Value="{DynamicResource ProgressIndicatorBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+
+    <Style x:Key="ActionProgressStyle" TargetType="ProgressBar">
+        <Setter Property="Foreground" Value="{DynamicResource ProgressIndicatorBrush}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Template" Value="{StaticResource ProgressBarTemplateKey}" />
+    </Style>
+
+    <!--  Window Control Button  -->
+    <Style TargetType="{x:Type Button}" x:Key="WindowControlButton">
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Padding" Value="8" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColorBrush}" />
+
+        <Setter Property="LayoutTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="1.5" />
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                        <TextBlock
+                          HorizontalAlignment="Center"
+                          Text="{TemplateBinding Content}"
+                          VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="OpacityMask" Value="{StaticResource PrimaryOpacityMask}" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#10497E" />
+                <Setter Property="Foreground" Value="White" />
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+
+    <!--  Window Close Button  -->
+    <Style
+      BasedOn="{StaticResource WindowControlButton}"
+      TargetType="{x:Type Button}"
+      x:Key="WindowCloseButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border
+                      Background="{TemplateBinding Background}"
+                      CornerRadius="0 0 0 0"
+                      Padding="{TemplateBinding Padding}">
+                        <TextBlock
+                          HorizontalAlignment="Center"
+                          Text="{TemplateBinding Content}"
+                          VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Red" />
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,33 @@
+﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
+	 xmlns:netfx="http://wixtoolset.org/schemas/v4/wxs/netfx">
+	<Bundle Name="WinFormsApp installer" Version="2.0.2.0"
+			Manufacturer="ZeroTech" UpgradeCode="2dbb1c89-6a2c-4adb-94d2-84eea9ffc29e">
+
+		<BootstrapperApplication SourceFile="WixToolset.WixBA.exe">
+			<Payload Name="mbanative.dll" SourceFile="mbanative.dll"/>
+			<Payload Name="WixToolset.BootstrapperApplicationApi.dll" SourceFile="WixToolset.BootstrapperApplicationApi.dll"/>
+			<Payload Name="WixToolset.WixBA.exe.config" SourceFile="WixToolset.WixBA.exe.config"/>
+
+		</BootstrapperApplication>
+
+		<netfx:DotNetCoreSearch
+			  RuntimeType="aspnet"
+			  Platform="x64"
+			  MajorVersion="9"
+			  Variable="AspNetCoreRuntimeVersion"
+			  />
+
+		<Chain>
+			<PackageGroupRef Id="NetFx481RedistAsPrereq" />
+
+
+			<!-- TODO: Define the list of chained packages. -->
+			<MsiPackage Id="WinFormsAppMSI"
+                        DisplayName="WinFormsApp"
+                        SourceFile="$(var.Wixtoolset5MSI.TargetPath)"
+                        Visible="yes">
+
+			</MsiPackage>
+		</Chain>
+	</Bundle>
+</Wix>
