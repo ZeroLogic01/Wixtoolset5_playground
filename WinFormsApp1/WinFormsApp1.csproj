@@ -12,9 +12,9 @@
 		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
 	</PropertyGroup>
 	<PropertyGroup>
-		<Version>1.0.2-beta1</Version>
+		<Version>1.0.3-beta1</Version>
 		<!-- accepts semver -->
-		<AssemblyVersion>1.0.2</AssemblyVersion>
+		<AssemblyVersion>1.0.3</AssemblyVersion>
 		<!-- only accepts Major.Minor.Patch.Revision -->
 		<AssemblyTitle>My Best App</AssemblyTitle>
 		<!-- When using AssemblyDiagnosticsAccessor, accessor.AssemblyTitle is actually the
