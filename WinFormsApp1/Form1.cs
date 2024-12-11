@@ -14,7 +14,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
 
-            var appcastUrl = "https://github.com/ZeroLogic01/Wixtoolset5_playground/files/winformsapp1/appcast.xml";
+            var appcastUrl = "https://github.com/ZeroLogic01/Wixtoolset5_playground/tree/main/files/winformsapp1/appcast.xml";
             // set icon in project properties!
             string manifestModuleName = Assembly.GetEntryAssembly().ManifestModule.FullyQualifiedName;
             var icon = Icon.ExtractAssociatedIcon(manifestModuleName);

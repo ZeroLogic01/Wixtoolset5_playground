@@ -396,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+files/winformsapp1/installer/Bootstrapper1.wixpdb
