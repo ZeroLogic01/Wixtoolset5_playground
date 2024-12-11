@@ -5,12 +5,12 @@
     <description>Most recent changes with links to updates</description>
     <language>en</language>
     <item>
-      <title>Application 1.0.4-beta1</title>
-      <sparkle:releaseNotesLink sparkle:signature="ndC+OCJmRCajAXTnACoHjyjFTI7OPwNDPg2ijFGAka+UfONQ0fU34U690MnlXpj8vubsVs1PU9O6P0MDcZ0DAQ==">https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/changelogs/1.0.4-beta1.md</sparkle:releaseNotesLink>
-      <pubDate>Wed, 11 Dec 2024 16:10:52 +05:00</pubDate>
-      <sparkle:version>1.0.4-beta1</sparkle:version>
-      <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
-      <enclosure url="https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/installer/WinFormsApp1.exe" sparkle:version="1.0.4-beta1" sparkle:shortVersionString="1.0.4" length="145920" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:signature="3225v70Iq7IUaQeCzTRk2j1fQjC5znYs/DTp2uoeT8wQ/b6YrmG5+et+51rRsMf+bQ0LBuEUHXp5hYpbfCZGAA==" />
+      <title>Application 2.0.2.0</title>
+      <sparkle:releaseNotesLink sparkle:signature="ndC+OCJmRCajAXTnACoHjyjFTI7OPwNDPg2ijFGAka+UfONQ0fU34U690MnlXpj8vubsVs1PU9O6P0MDcZ0DAQ==">https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/changelogs/2.0.2.0.md</sparkle:releaseNotesLink>
+      <pubDate>Thu, 05 Dec 2024 13:17:53 +05:00</pubDate>
+      <sparkle:version>2.0.2.0</sparkle:version>
+      <sparkle:shortVersionString>2.0.2.0</sparkle:shortVersionString>
+      <enclosure url="https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/installer/Bootstrapper1.exe" sparkle:version="2.0.2.0" sparkle:shortVersionString="2.0.2.0" length="3672305" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:signature="pMsB75B6V2Defx23WfrnpGVON1Y2LWswRl7nlP+hgNsAU3JKKLdhj3p0FOACV/XnAn0ransLrmgxP9xVRi+ADg==" />
     </item>
   </channel>
 </rss>
