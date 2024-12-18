@@ -6,12 +6,11 @@
     <description>Most recent changes with links to updates</description>
     <language>en</language>
     <item>
-      <title>Application 2.0.2.0</title>
-      <sparkle:releaseNotesLink sparkle:signature="ndC+OCJmRCajAXTnACoHjyjFTI7OPwNDPg2ijFGAka+UfONQ0fU34U690MnlXpj8vubsVs1PU9O6P0MDcZ0DAQ==">https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/changelogs/2.0.2.0.md</sparkle:releaseNotesLink>
+      <title>Application 2.0.3</title>
       <pubDate>Thu, 05 Dec 2024 13:17:53 +05:00</pubDate>
-      <sparkle:version>2.0.2.0</sparkle:version>
-      <sparkle:shortVersionString>2.0.2.0</sparkle:shortVersionString>
-      <enclosure url="https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/installer/Bootstrapper1.exe" sparkle:version="2.0.2.0" sparkle:shortVersionString="2.0.2.0" length="3672305" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:signature="pMsB75B6V2Defx23WfrnpGVON1Y2LWswRl7nlP+hgNsAU3JKKLdhj3p0FOACV/XnAn0ransLrmgxP9xVRi+ADg==" />
+      <sparkle:version>2.0.3</sparkle:version>
+      <sparkle:shortVersionString>2.0.3</sparkle:shortVersionString>
+      <enclosure url="https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/installer/Bootstrapper1.exe" sparkle:version="2.0.3" sparkle:shortVersionString="2.0.3" length="3672731" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:signature="2LqzzEMsQt24Iu/9vtTshrAnEV0g50eP6X45omrjpS5tWNoHbxpRV1avqp5eP/ls25cfz5ZFgt6X4n6Zwkp0CA==" />
     </item>
   </channel>
 </rss>

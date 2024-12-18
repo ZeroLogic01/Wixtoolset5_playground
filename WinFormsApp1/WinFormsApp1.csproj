@@ -16,7 +16,7 @@
 		<!-- accepts semver -->
 		<AssemblyVersion>1.0.4</AssemblyVersion>
 		<!-- only accepts Major.Minor.Patch.Revision -->
-		<AssemblyTitle>My Best App</AssemblyTitle>
+		<AssemblyTitle>Application</AssemblyTitle>
 		<!-- When using AssemblyDiagnosticsAccessor, accessor.AssemblyTitle is actually the
      <Product> information due to limitations with the way the diagnostics access works -->
 		<Description>My app is cool (not required)</Description>
