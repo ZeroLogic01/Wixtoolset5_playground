@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
   <channel>
     <title>Application</title>
+    <link>https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/appcast.xml</link>
     <description>Most recent changes with links to updates</description>
-	<link>https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/appcast.xml</link>
     <language>en</language>
     <item>
       <title>Application 2.0.2.0</title>
