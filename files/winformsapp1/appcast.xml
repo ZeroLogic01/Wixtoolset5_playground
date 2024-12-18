@@ -3,6 +3,7 @@
   <channel>
     <title>Application</title>
     <description>Most recent changes with links to updates</description>
+	<link>https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/appcast.xml</link>
     <language>en</language>
     <item>
       <title>Application 2.0.2.0</title>
