@@ -10,7 +10,7 @@
       <pubDate>Thu, 05 Dec 2024 13:17:53 +05:00</pubDate>
       <sparkle:version>2.0.3</sparkle:version>
       <sparkle:shortVersionString>2.0.3</sparkle:shortVersionString>
-      <enclosure url="https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/installer/Bootstrapper1.exe" sparkle:version="2.0.3" sparkle:shortVersionString="2.0.3" length="3672693" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:edSignature="xJSbMqX8m6u4O4FqkQj/9oUslyJ6r4Xn0csxrfQbcE3sZj76e7As1eoLJ0D0IS0ARI9BIUZAW9iZcSBKt4iwAg==" />
+      <enclosure url="https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/installer/Bootstrapper1.exe" sparkle:version="2.0.3" sparkle:shortVersionString="2.0.3" length="3672693" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:signature="xJSbMqX8m6u4O4FqkQj/9oUslyJ6r4Xn0csxrfQbcE3sZj76e7As1eoLJ0D0IS0ARI9BIUZAW9iZcSBKt4iwAg==" />
     </item>
   </channel>
 </rss>

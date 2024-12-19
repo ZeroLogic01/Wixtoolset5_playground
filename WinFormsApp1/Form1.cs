@@ -18,7 +18,7 @@ namespace WinFormsApp1
             // set icon in project properties!
             string manifestModuleName = Assembly.GetEntryAssembly().ManifestModule.FullyQualifiedName;
             var icon = Icon.ExtractAssociatedIcon(manifestModuleName);
-            _sparkleUpdateDetector = new SparkleUpdater(appcastUrl, new Ed25519Checker(SecurityMode.Strict, "2I8WefuihZprgUoM8Wyb+2aTFYDYb4odwhAAF8fcCAY="))
+            _sparkleUpdateDetector = new SparkleUpdater(appcastUrl, new Ed25519Checker(SecurityMode.Unsafe, "2I8WefuihZprgUoM8Wyb+2aTFYDYb4odwhAAF8fcCAY="))
             {
                 UIFactory = new NetSparkleUpdater.UI.WinForms.UIFactory(icon),
                 // TLS 1.2 required by GitHub (https://developer.github.com/changes/2018-02-01-weak-crypto-removal-notice/)
