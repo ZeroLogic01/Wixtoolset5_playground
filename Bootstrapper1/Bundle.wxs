@@ -1,6 +1,6 @@
 ﻿<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs"
 	 xmlns:netfx="http://wixtoolset.org/schemas/v4/wxs/netfx">
-	<Bundle Name="WinFormsApp installer" Version="2.0.4"
+	<Bundle Name="WinFormsApp installer" Version="2.0.5"
 			Manufacturer="ZeroTech" UpgradeCode="2dbb1c89-6a2c-4adb-94d2-84eea9ffc29e">
 
 		<BootstrapperApplication SourceFile="WixToolset.WixBA.exe">
