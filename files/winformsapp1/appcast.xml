@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Immo Pro Desktop</title>
+    <description>Most recent changes with links to updates</description>
+    <language>en</language>
+    <item>
+      <title>Immo Pro Desktop 2.0.5</title>
+      <pubDate>Thu, 19 Dec 2024 19:51:25 +05:00</pubDate>
+      <sparkle:version>2.0.5</sparkle:version>
+      <sparkle:shortVersionString>2.0.5</sparkle:shortVersionString>
+      <enclosure url="Bootstrapper1.exe" sparkle:version="2.0.5" sparkle:shortVersionString="2.0.5" length="3672851" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:signature="gcSJqKhEc3wmgzr9473n6qOmvkY589dvDkjFZ0yWsBRSx/UDdU6fuEzAH7KgcfjDGs9EBLv6eDNa02ybzkG9Cw==" />
+    </item>
+  </channel>
+</rss>
