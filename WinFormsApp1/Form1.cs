@@ -22,7 +22,8 @@ namespace WinFormsApp1
             {
                 UIFactory = new NetSparkleUpdater.UI.WinForms.UIFactory(icon),
                 // TLS 1.2 required by GitHub (https://developer.github.com/changes/2018-02-01-weak-crypto-removal-notice/)
-                SecurityProtocolType = System.Net.SecurityProtocolType.Tls12
+                //  SecurityProtocolType = System.Net.SecurityProtocolType.Tls12
+                
             };
             //_sparkleUpdateDetector.CloseApplication += _sparkleUpdateDetector_CloseApplication;
             _sparkleUpdateDetector.StartLoop(true, true);
