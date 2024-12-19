@@ -13,12 +13,12 @@ namespace WinFormsApp1
         public Form1()
         {
             InitializeComponent();
-
+            // var appcastUrl = "https://netsparkleupdater.github.io/NetSparkle/files/sample-app/appcast.xml";
             var appcastUrl = "https://github.com/ZeroLogic01/Wixtoolset5_playground/tree/main/files/winformsapp1/appcast.xml";
             // set icon in project properties!
             string manifestModuleName = Assembly.GetEntryAssembly().ManifestModule.FullyQualifiedName;
             var icon = Icon.ExtractAssociatedIcon(manifestModuleName);
-            _sparkleUpdateDetector = new SparkleUpdater(appcastUrl, new DSAChecker(SecurityMode.Strict))
+            _sparkleUpdateDetector = new SparkleUpdater(appcastUrl, new Ed25519Checker(SecurityMode.Strict, "2I8WefuihZprgUoM8Wyb+2aTFYDYb4odwhAAF8fcCAY="))
             {
                 UIFactory = new NetSparkleUpdater.UI.WinForms.UIFactory(icon),
                 // TLS 1.2 required by GitHub (https://developer.github.com/changes/2018-02-01-weak-crypto-removal-notice/)

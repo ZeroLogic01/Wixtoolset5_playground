@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
   <channel>
-    <title>Application</title>
+    <title>Immo Pro Desktop</title>
     <link>https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/appcast.xml</link>
     <description>Most recent changes with links to updates</description>
     <language>en</language>
     <item>
-      <title>Application 2.0.3</title>
+      <title>Immo Pro Desktop 2.0.3</title>
       <pubDate>Thu, 05 Dec 2024 13:17:53 +05:00</pubDate>
       <sparkle:version>2.0.3</sparkle:version>
       <sparkle:shortVersionString>2.0.3</sparkle:shortVersionString>
-      <enclosure url="https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/installer/Bootstrapper1.exe" sparkle:version="2.0.3" sparkle:shortVersionString="2.0.3" length="3672731" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:signature="2LqzzEMsQt24Iu/9vtTshrAnEV0g50eP6X45omrjpS5tWNoHbxpRV1avqp5eP/ls25cfz5ZFgt6X4n6Zwkp0CA==" />
+      <enclosure url="https://github.com/ZeroLogic01/Wixtoolset5_playground/blob/main/files/winformsapp1/installer/Bootstrapper1.exe" sparkle:version="2.0.3" sparkle:shortVersionString="2.0.3" length="3672693" sparkle:os="windows" type="application/octet-stream" sparkle:criticalUpdate="false" sparkle:edSignature="xJSbMqX8m6u4O4FqkQj/9oUslyJ6r4Xn0csxrfQbcE3sZj76e7As1eoLJ0D0IS0ARI9BIUZAW9iZcSBKt4iwAg==" />
     </item>
   </channel>
 </rss>
